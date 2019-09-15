@@ -5,8 +5,13 @@ class Form extends React.Component {
     return (
       <div>
         <form onSubmit={this.props.formSubmit}>
-          <input type="text" name="city" placeholder="city" />
-          <input type="text" name="country" placeholder="state" />
+          <input type="text" name="city" placeholder="city" required={true} />
+          <input
+            type="text"
+            name="country"
+            placeholder="state"
+            required={true}
+          />
           <button type="submit">GET DATA</button>
         </form>
       </div>
