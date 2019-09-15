@@ -4,11 +4,19 @@ import Form from "./Components/Form";
 import Result from "./Components/Result";
 
 class App extends React.Component {
+  state = {};
+
+  formSubmit = e => {
+    e.preventDefault();
+    const city = e.target.elements.city.value;
+    const state = e.target.elements.state.value;
+  };
+
   render() {
     return (
       <div>
         <Title />
-        <Form />
+        <Form formSubmit={this.formSubmit} />
         <Result />
       </div>
     );
